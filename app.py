@@ -503,6 +503,9 @@ def render_hero() -> None:
             <span class="badge">ByteTrack</span>
             <span class="badge">Multi-Line Counting</span>
             <span class="badge">EMA Smoothing</span>
+            <div style="margin-top:1.6rem; font-size:0.88rem; color:#64748b; letter-spacing:0.04em;">
+                Built by &nbsp;<strong style="color:#cbd5e1; font-weight:600; letter-spacing:0.06em;">MUHAMMAD OVAIS YUSUF</strong>
+            </div>
         </div>
         """,
         unsafe_allow_html=True,
