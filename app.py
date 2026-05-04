@@ -273,29 +273,33 @@ st.markdown(
 # ─────────────────────────────────────────────────────────────────────────────
 LOCATIONS: dict[str, dict] = {
     "University Park": {
-        "input_video":   "data/university_park/input.mp4",
-        "output_video":  "data/university_park/output.mp4",
-        "csv":           "data/university_park/results.csv",
-        "model":         "YOLOv8m",
-        "tracker":       "ByteTrack",
-        "count_method":  "Multi-Line · 3 Vertical Lines",
-        "line_pos":      "25% · 50% · 75%",
-        "conf":          "0.35",
-        "smooth_alpha":  "0.6",
-        "track_buffer":  "10 frames",
+        "input_video":      "data/university_park/input.mp4",
+        "output_video":     "data/university_park/output.mp4",
+        "input_video_url":  "https://youtu.be/c2A0UmQJAGg",
+        "output_video_url": "https://youtu.be/38EDFQcwma8",
+        "csv":              "data/university_park/results.csv",
+        "model":            "YOLOv8m",
+        "tracker":          "ByteTrack",
+        "count_method":     "Multi-Line · 3 Vertical Lines",
+        "line_pos":         "25% · 50% · 75%",
+        "conf":             "0.35",
+        "smooth_alpha":     "0.6",
+        "track_buffer":     "10 frames",
         "ready": True,
     },
     "Railroad Crossing": {
-        "input_video":   "data/railroad_crossing/input.mp4",
-        "output_video":  "data/railroad_crossing/output.mp4",
-        "csv":           "data/railroad_crossing/results.csv",
-        "model":         "YOLOv8l",
-        "tracker":       "BOTSort",
-        "count_method":  "Multi-Line · 3 Vertical Lines",
-        "line_pos":      "25% · 50% · 75%",
-        "conf":          "0.10",
-        "smooth_alpha":  "0.75",
-        "track_buffer":  "45 frames",
+        "input_video":      "data/railroad_crossing/input.mp4",
+        "output_video":     "data/railroad_crossing/output.mp4",
+        "input_video_url":  "https://youtu.be/TriC4MtOLMU",
+        "output_video_url": "https://youtu.be/WCw7U15TSQo",
+        "csv":              "data/railroad_crossing/results.csv",
+        "model":            "YOLOv8l",
+        "tracker":          "BOTSort",
+        "count_method":     "Multi-Line · 3 Vertical Lines",
+        "line_pos":         "25% · 50% · 75%",
+        "conf":             "0.10",
+        "smooth_alpha":     "0.75",
+        "track_buffer":     "45 frames",
         "ready": True,
     },
 }
@@ -552,6 +556,8 @@ def render_videos(cfg: dict) -> None:
         raw = load_video_bytes(cfg["input_video"])
         if raw:
             st.video(raw)
+        elif cfg.get("input_video_url"):
+            st.video(cfg["input_video_url"])
         else:
             st.warning(f"Not found: `{cfg['input_video']}`")
 
@@ -560,6 +566,8 @@ def render_videos(cfg: dict) -> None:
         out = load_video_bytes(cfg["output_video"])
         if out:
             st.video(out)
+        elif cfg.get("output_video_url"):
+            st.video(cfg["output_video_url"])
         else:
             st.warning(f"Not found: `{cfg['output_video']}`")
 
