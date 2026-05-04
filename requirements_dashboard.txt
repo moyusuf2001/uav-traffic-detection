@@ -1,0 +1,8 @@
+# ── Streamlit Community Cloud deployment ─────────────────────────────────────
+# Minimal dependencies for app.py (dashboard only).
+# The dashboard reads pre-generated CSV files — it does NOT run inference.
+# For the full ML pipeline (main.py / railroad_crossing.py) use requirements.txt
+streamlit>=1.35.0
+pandas>=2.2.0
+plotly>=5.20.0
+numpy>=1.26.0

@@ -1,0 +1,26 @@
+# ── Detection & tracking pipeline ────────────────────────────────────────────
+ultralytics>=8.2.0        # YOLOv8 detection + built-in ByteTrack/BOTSort
+opencv-python>=4.9.0      # Video I/O and drawing
+
+# ── Data processing ───────────────────────────────────────────────────────────
+pandas>=2.2.0             # CSV loading and analysis
+numpy>=1.26.0             # Numerical operations
+
+# ── Streamlit dashboard ───────────────────────────────────────────────────────
+streamlit>=1.35.0         # Web UI framework
+plotly>=5.20.0            # Interactive charts (used in app.py)
+
+# ── Deep-learning backend ─────────────────────────────────────────────────────
+# PyTorch ships with MPS support on Apple Silicon (macOS ≥ 12.3, M1/M2/M3).
+# Install the correct wheel from https://pytorch.org/get-started/locally/
+#
+# macOS (CPU / MPS – Apple Silicon):
+#   pip install torch torchvision
+#
+# Linux / Windows + CUDA 12.1:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.2.0
+torchvision>=0.17.0
+
+# Utilities already bundled with ultralytics:
+# scipy, pyyaml, tqdm, pillow, psutil, py-cpuinfo, seaborn, matplotlib

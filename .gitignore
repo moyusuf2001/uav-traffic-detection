@@ -1,0 +1,46 @@
+# ── Model weights (large binaries, download separately) ──────────────────────
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# ── Video files (too large for git) ──────────────────────────────────────────
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ── Pipeline output directory (generated files) ──────────────────────────────
+outputs/
+
+# ── Virtual environment ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Jupyter / IPython ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDE / editor ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Distribution / packaging ──────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
